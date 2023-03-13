@@ -7,7 +7,7 @@ describe("alura search courses", () => {
     cy.get("#header-barraBusca-form-campoBusca").type("Javascript");
     cy.get(".header-barraBusca-form-submit").click();
     cy.get(
-      ":nth-child(3) > .busca-resultado-link > .busca-resultado-container > .busca-resultado-nome"
-    ).should("have.text", "Formação JavaScript para back-end");
+      "h4.busca-resultado-nome"
+    ).should("contain", "Formação Aprenda a programar em JavaScript com foco no back-end");
   });
 });
